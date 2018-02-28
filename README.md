@@ -34,8 +34,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 npm install datatables.net --save
 npm install datatables.net-dt --save
 
-## npm install @types/jquery --save-dev
-## npm install @types/datatables.net --save-dev
+npm install @types/jquery --save-dev
+npm install @types/datatables.net --save-dev
 
 ## install the responsive feature of data tables
 npm install datatables.net-responsive --save
@@ -63,7 +63,7 @@ Next, `import { DataTablesModule } from 'angular-datatables';` in app.module.ts 
 ## create new project => ng new mean-app => cd mean-app
 
 ## run command => ng build
-## this is to create the "dist" folder, to which the node server will point to run the app 
+this is to create the "dist" folder, to which the node server will point to run the app 
 
 ## install express framework for node server => npm install --save express body-parser
 
