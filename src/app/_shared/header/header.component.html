@@ -1,0 +1,18 @@
+ <div>
+    <!--navbar starts-->
+      <nav class="navbar navbar-inverse ">
+        <div class="container-fluid" id="mainNavbar">
+        <div class="navbar-header">
+          <a class="navbar-brand" routerLink="/home">Assignment 1</a>
+        </div>
+        <ul class="nav navbar-nav" id="subHeader">
+          <li><a routerLink="/home" routerLinkActive="active-link">Home</a></li>
+          <li><a routerLink="/page1" routerLinkActive="active-link">Page 1</a></li>
+          <li><a routerLink="/page2" routerLinkActive="active-link">Page 2</a></li>
+          <li *ngIf="loggedinservice.isLoggedIn()" style="float:right;" ><a href="" (click)="logout()" data-toggle="tooltip" title="Logout"><i class="fa fa-power-off" aria-hidden="true" style="color:white;"></i></a></li>
+        </ul>
+        </div>
+      </nav>
+
+      <!--navbar ends-->
+  </div>

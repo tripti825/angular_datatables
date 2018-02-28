@@ -1,0 +1,13 @@
+/*for the image*/
+.imageclass {
+	height: 100px;
+	transition: all .3s ease-in-out;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.imageclass:hover {
+    height: 300px;
+}
+.danger {
+	color: RED;
+}

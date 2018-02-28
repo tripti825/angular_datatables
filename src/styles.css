@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* the following lines to remove the pale yellow color of input tag in Chrome browser on autofill*/
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus {
+    background-color: #f2f2f2 !important;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #f2f2f2 inset !important;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0px 9999px #f2f2f2;
+}

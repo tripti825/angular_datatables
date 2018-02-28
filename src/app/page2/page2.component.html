@@ -1,0 +1,22 @@
+<div class="container-fluid">
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover" id="file_table">
+<tfoot>
+  <tr>
+  <td *ngFor = "let title of dtOptions.columns"><input type="text" placeholder="Search"  style="width: 100%;" /></td>
+  </tr>
+</tfoot>
+</table>
+</div>
+
+<div class="row" style="padding-left: 30px;">
+  <div class="col-md-5">
+  <input type="text" [formControl]="term" placeholder="Search [USING OBSERVABLE]" />
+  </div>
+  <div class="col-md-5" style="float:right;">
+  <mat-paginator [length]="pageLength"
+                 [pageSize]="pageOption.limit"
+                 [pageSizeOptions]="pageSizeOptions"
+                 (page)="pageEvent = paginateEvent($event)">
+  </mat-paginator>
+  </div>
+</div>

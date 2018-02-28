@@ -1,0 +1,30 @@
+<div class="container-fluid">
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Zipcode</th>
+      <th>Age</th>
+      <th>Phone</th>
+      <th>Admin</th>
+      <th>Created</th>
+      <th>Modified</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngIf="appdata">
+      <td>{{ appdata.first_name }} {{ appdata.last_name }}</td>
+      <td>{{ appdata.address }}</td>
+      <td>{{ appdata.zip }}</td>
+      <td>{{ appdata.age }}</td>
+      <td>{{ appdata.phone }}</td>
+      <td>{{ appdata.isAdmin }}</td>
+      <td>{{ appdata.createdAt | date}}</td>
+      <td>{{ appdata.updatedAt | date}}</td>
+    </tr>
+    
+    
+  </tbody>
+</table>
+</div>

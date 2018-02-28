@@ -1,0 +1,27 @@
+<div class="container-fluid">
+
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover" id="file_table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = " let file of filelist; let i = index ">
+      <td></td>
+      <td *ngIf="enableEditFlag == false">{{file.originalName}}</td>
+      <td *ngIf="enableEditFlag == true && enableEditId == file._id">
+        <input type="text"  [(ngModel)]="newname" autofocus>
+        <label style="background-color: seagreen" class="btn btn-sm btn-success" (click)="editFile(file._id, newname)">Update</label></td> 
+      <td *ngIf="enableEditFlag == true && enableEditId != file._id">{{file.originalName}}</td>
+      <td><img src="{{file.path}}" class="listimg"></td>
+      <td><span data-toggle="tooltip" title="delete" class="btn" (click)="deleteFile(file._id, file.originalName)"><i class="fa fa-trash" aria-hidden="true"></i></span>
+      <span data-toggle="tooltip" title="edit" class="btn" (click)="enableEdit(file._id, file.originalName)"><i class="fa fa-pencil" aria-hidden="true"></i></span></td>
+    </tr>
+    
+  </tbody>
+</table>
+</div>
